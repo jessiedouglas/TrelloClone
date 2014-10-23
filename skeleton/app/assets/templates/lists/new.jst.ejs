@@ -1,0 +1,15 @@
+<h3>Create New List!</h3>
+
+<form>
+  <input type="hidden"
+      name="list[board_id]"
+      value="<%= board.id %>">
+
+  <label for="list-title">Title</label>
+  <input type="text" id="list-title" name="list[title]">
+
+  <input type="checkbox" name="list[ord]" id="list-ord" value="1">
+  <label for="list-ord">Important</label>
+
+  <button class="add-list">Create List</button>
+</form>

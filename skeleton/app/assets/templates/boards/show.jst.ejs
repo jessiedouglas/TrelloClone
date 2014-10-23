@@ -1,0 +1,11 @@
+<h1><%= board.escape("title") %></h1>
+
+<ul>
+  <% board.lists().each(function (list) { %>
+    <li class="list" data-id="<%= list.get("id") %>">
+      <%= list.escape("title") %>
+      <button class="delete-list"
+          data-id="<%= list.get("id") %>">Delete</button>
+    </li>
+  <% }); %>
+</ul>
