@@ -1,11 +1,14 @@
-<h1><%= board.escape("title") %></h1>
+<h1 class="board_title"><%= board.escape("title") %></h1>
 
-<ul>
+<ul id="sortable">
   <% board.lists().each(function (list) { %>
-    <li class="list" data-id="<%= list.get("id") %>">
-      <%= list.escape("title") %>
-      <button class="delete-list"
-          data-id="<%= list.get("id") %>">Delete</button>
-    </li>
+    <div class="list-div" id="list_<%= list.get("id") %>">
+      <li class="list list<%= list.get("id") %>"
+            data-id="<%= list.get("id") %>">
+        <h3 class="list_title"><%= list.escape("title") %></h3>
+        <button class="delete-list"
+            data-id="<%= list.get("id") %>">Delete</button>
+      </li>
+    </div>
   <% }); %>
 </ul>

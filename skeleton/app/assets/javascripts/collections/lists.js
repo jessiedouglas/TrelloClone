@@ -7,6 +7,6 @@ TrelloClone.Collections.Lists = Backbone.Collection.extend({
   },
 
   comparator: function (model) {
-    return -model.get("ord");
+    return model.get("ord");
   }
 });
